@@ -1,5 +1,7 @@
+// Importing Schema and model from mongoose 
 const { Schema, model } = require('mongoose');
 
+// Declaring Schema definition for user(s)
 const userSchema = new Schema(
   {
     username: {
@@ -29,6 +31,8 @@ const userSchema = new Schema(
       }
     ],
   },
+/*   To include any virtuals when converting document to JSON and ensure any getters
+that are possibly defined/added later are applied */
   {
     toJSON: {
       virtuals: true,
@@ -37,10 +41,14 @@ const userSchema = new Schema(
   }
 );
 
+/* Virtual property that is not stored in DB but is calculated in real time everytime the 
+ friendCount property is accessed */
 userSchema.virtual('friendCount').get(function() {
   return this.friends.length;
 });
 
+// Creating user model using Schema^
 const User = model('User', userSchema);
 
+// Exporting model to be used elsewhere
 module.exports = User;
