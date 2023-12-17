@@ -20,7 +20,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp) => timestamp.toDateString(), // Example getter to format the date
+      get: (timestamp) => timestamp.toDateString(), // Getter to format the date
     },
   },
   {
