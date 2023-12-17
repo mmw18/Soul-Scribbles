@@ -47,7 +47,7 @@ userSchema.virtual('friendCount').get(function() {
   return this.friends.length;
 });
 
-// Creating user model using Schema^
+// Creating User model using Schema^
 const User = model('User', userSchema);
 
 // Exporting model to be used elsewhere

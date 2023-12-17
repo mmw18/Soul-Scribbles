@@ -1,4 +1,4 @@
-// Importing Schema and model from mongoose 
+// Importing Schema and types from mongoose 
 const { Schema, Types } = require('mongoose');
 
 // Declaring Schema definition for reaction subdocument
@@ -25,7 +25,7 @@ const reactionSchema = new Schema(
   },
   {
     toJSON: {
-      getters: true, // Ensuring any getters defined are applied
+      getters: true, // Ensuring getters are applied
     },
     id: false, // Preventing the virtual _id field from being added
   }
