@@ -1,7 +1,7 @@
 // Importing thought.js,user.js, and express
 const router = require('express').Router();
-const Thought = require('../models/thought'); 
-const User = require('../models/user'); 
+const Thought = require('../../models/thought'); 
+const User = require('../../models/user'); 
 
 // GET to get all thoughts
 router.get('/', async (req, res) => {
