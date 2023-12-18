@@ -46,7 +46,11 @@ router.put('/:userId', async (req, res) => {
         }
         res.json(updatedUser);
     } catch (err) {
-        res.status(500).json(err);
+        if (err.name === 'CastError') {
+            res.status(400).json({ message: 'Invalid user id format' });
+        } else {
+            res.status(500).json(err);
+        }
     }
 });
 
