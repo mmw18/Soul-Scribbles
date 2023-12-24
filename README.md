@@ -59,5 +59,5 @@ Contributions to SoulScribbles are welcome! :) Please follow these steps to cont
 6. Open a pull request.
 
 ## Video Walk-Through
-[Click here to see it in use.](https://drive.google.com/file/d/1DHbGSVeBMhxyyG58y59Di-LebjXbfbG0/view)
+[Click here to see it in use.](https://drive.google.com/file/d/1Fx6c4FiCSTgG9ksFwiaecaRTw_id_5_0/view)
 
